@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/akhil/ecommerce-yt/models"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

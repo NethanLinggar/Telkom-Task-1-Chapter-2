@@ -4,10 +4,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/akhil/ecommerce-yt/controllers"
-	"github.com/akhil/ecommerce-yt/database"
-	"github.com/akhil/ecommerce-yt/middleware"
-	"github.com/akhil/ecommerce-yt/routes"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/controllers"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/database"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/middleware"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/routes"
 
 	"github.com/gin-gonic/gin"
 )

@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/akhil/ecommerce-yt/database"
-	"github.com/akhil/ecommerce-yt/models"
-	generate "github.com/akhil/ecommerce-yt/tokens"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/database"
+	"github.com/NethanLinggar/telkom-task-1-chapter-2/models"
+	generate "github.com/NethanLinggar/telkom-task-1-chapter-2/tokens"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

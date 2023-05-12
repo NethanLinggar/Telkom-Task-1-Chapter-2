@@ -1,4 +1,4 @@
-module github.com/akhil/ecommerce-yt
+module github.com/NethanLinggar/telkom-task-1-chapter-2
 
 go 1.16
 

@@ -2,13 +2,14 @@
 
 ```bash
 # You can start the project with below commands
+go mod tidy
 docker-compose up -d
 go run main.go
 ```
 
-- **SIGNUP FUNCTION API CALL (POST REQUEST)**
+- **Sign Up Function API Call (POST REQUEST)**
 
-http://localhost:8000/users/signup
+  http://localhost:8000/users/signup
 
 ```json
 {
@@ -20,9 +21,10 @@ http://localhost:8000/users/signup
 }
 ```
 
-Response :"Successfully Signed Up!!"
+Response:
+```"Successfully Signed Up!!"```
 
-- **LOGIN FUNCTION API CALL (POST REQUEST)**
+- **Login Function API Call (POST REQUEST)**
 
   http://localhost:8000/users/login
 
@@ -33,28 +35,28 @@ Response :"Successfully Signed Up!!"
 }
 ```
 
-response will be like this
+Response:
 
 ```json
 {
-  "_id": "***********************",
+  "_id": "645e367dd677ff15da0cf8b7",
   "first_name": "Nethan",
   "last_name": "Linggar",
-  "password": "$2a$14$UIYjkTfnFnhg4qhIfhtYnuK9qsBQifPKgu/WPZAYBaaN17j0eTQZa",
+  "password": "$2a$14$.bqYlkXRec.QoHyFwpfYruBZi0IpoothV4Ky5019IB/VFzC.Eh7Zu",
   "email": "nethan.linggar@gmail.com",
   "phone": "+628131234567",
-  "token": "eyJc0Bwcm90b25vbWFpbC5jb20iLCJGaXJzdF9OYW1lIjoiam9zZXBoIiwiTGFzdF9OYW1lIjoiaGVybWlzIiwiVWlkIjoiNjE2MTRmNTM5ZjI5YmU5NDJiZDlkZjhlIiwiZXhwIjoxNjMzODUzNjUxfQ.NbcpVtPLJJqRF44OLwoanynoejsjdJb5_v2qB41SmB8",
-  "Refresh_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnLCJVaWQiOiIiLCJleHAiOjE2MzQzNzIwNTF9.ocpU8-0gCJsejmCeeEiL8DXhFcZsW7Z3OCN34HgIf2c",
-  "created_at": "2022-04-09T08:14:11Z",
-  "updtaed_at": "2022-04-09T08:14:11Z",
-  "user_id": "61614f539f29be942bd9df8e",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6Im5ldGhhbi5saW5nZ2FyQGdtYWlsLmNvbSIsIkZpcnN0X05hbWUiOiJOZXRoYW4iLCJMYXN0X05hbWUiOiJMaW5nZ2FyIiwiVWlkIjoiNjQ1ZTM2N2RkNjc3ZmYxNWRhMGNmOGI3IiwiZXhwIjoxNjgzOTgyMzMzfQ.xWdU973dGRbUDp-IoNKM-b38Et6Qr710gX3Bn0E9d2c",
+  "Refresh_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIkZpcnN0X05hbWUiOiIiLCJMYXN0X05hbWUiOiIiLCJVaWQiOiIiLCJleHAiOjE2ODQ1MDA3MzN9.EdYojTkx--BOagSymCiRwhGaFLeqmeUTGKkK1g7jOPg",
+  "created_at": "2023-05-12T12:52:13Z",
+  "updtaed_at": "2023-05-12T12:52:13Z",
+  "user_id": "645e367dd677ff15da0cf8b7",
   "usercart": [],
   "address": [],
   "orders": []
 }
 ```
 
-- **Admin add Product Function (POST REQUEST)**
+- **Admin Add Product Function (POST REQUEST)**
 
   http://localhost:8000/admin/addproduct
 
@@ -67,47 +69,48 @@ response will be like this
 }
 ```
 
-Response : "Successfully added our Product Admin!!"
+Response:
+```"Successfully added our Product Admin!!"```
 
-- **View all the Products in db GET REQUEST**
+- **View All The Products in DB (GET REQUEST)**
 
   http://localhost:8000/users/productview
 
-Response
+Response:
 
 ```json
 [
   {
     "Product_ID": "6153ff8edef2c3c0a02ae39a",
-    "product_name": "alienwarex15",
+    "product_name": "Alienware X15",
     "price": 1500,
     "rating": 10,
     "image": "alienware.jpg"
   },
   {
     "Product_ID": "616152679f29be942bd9df8f",
-    "product_name": "giner ale",
+    "product_name": "Ginger Ale",
     "price": 900,
     "rating": 5,
     "image": "gin.jpg"
   },
   {
     "Product_ID": "616152ee9f29be942bd9df90",
-    "product_name": "iphone 13",
+    "product_name": "iPhone 13",
     "price": 1700,
     "rating": 4,
     "image": "ipho.jpg"
   },
   {
     "Product_ID": "616152fa9f29be942bd9df91",
-    "product_name": "whiskey",
+    "product_name": "Whiskey",
     "price": 100,
     "rating": 7,
     "image": "whis.jpg"
   },
   {
     "Product_ID": "616153039f29be942bd9df92",
-    "product_name": "acer predator",
+    "product_name": "Acer Predator",
     "price": 3000,
     "rating": 10,
     "image": "acer.jpg"
@@ -115,25 +118,24 @@ Response
 ]
 ```
 
-- **Search Product by regex function (GET REQUEST)**
+- **Search Product by Regex Function (GET REQUEST)**
 
-defines the word search sorting
-http://localhost:8000/users/search?name=al
+http://localhost:8000/users/search?name=Al
 
-response:
+Response:
 
 ```json
 [
   {
     "Product_ID": "616152fa9f29be942bd9df91",
-    "product_name": "Alienware x15",
+    "product_name": "Alienware X15",
     "price": 1500,
     "rating": 10,
     "image": "1.jpg"
   },
   {
     "Product_ID": "616153039f29be942bd9df92",
-    "product_name": "ginger Ale",
+    "product_name": "Ginger Ale",
     "price": 300,
     "rating": 10,
     "image": "1.jpg"
@@ -143,9 +145,7 @@ response:
 
 - **Adding the Products to the Cart (GET REQUEST)**
 
-  http://localhost:8000/addtocart?id=xxxproduct_idxxx&userID=xxxxxxuser_idxxxxxx
-
-  Corresponding mongodb query
+  http://localhost:8000/addtocart?id=xxx&product_idxxx&userID=xxxxxxuser_idxxxxxx
 
 - **Removing Item From the Cart (GET REQUEST)**
 
@@ -159,7 +159,7 @@ response:
 
   http://localhost:8000/addadress?id=user_id**\*\***\***\*\***
 
-  The Address array is limited to two values home and work address more than two address is not acceptable
+  The Address array is limited to two values home and work address more than two address is not acceptable.
 
 ```json
 {
@@ -186,9 +186,10 @@ response:
 
 - **Cart Checkout Function and placing the order(GET REQUEST)**
 
-  After placing the order the items have to be deleted from cart functonality added
+  After placing the order, the items are deleted from the cart.
 
   http://localhost:8000?id=xxuser_idxxx
 
 - **Instantly Buying the Products(GET REQUEST)**
+  
   http://localhost:8000?userid=xxuser_idxxx&pid=xxxxproduct_idxxxx
